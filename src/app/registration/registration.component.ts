@@ -7,7 +7,7 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-
+name = new FormControl('');
   constructor() { }
 
   ngOnInit() {
