@@ -1,4 +1,35 @@
+<div class="container">
+<form [formGroup]="profileForm" (ngSubmit)="onsubmit()">
+  <div>
+  <label>
+    First Name:
+    <input type="text" [formControl]="firstName" required>
+  </label><br><br>
+  
+  <label>
+    Last Name:
+    <input type="text" [formControl]="lastName" required>
+  </label><br><br>
+  <div formGroupName="address">
 <label>
-  Name:
-  <input type="text" [formControl]="name">
-</label>
+  Street:
+  <input type="text" [formControl]="street">
+</label><br><br>
+<label>
+  city:
+  <input type="text" [formControl]="city">
+</label><br><br>
+<label>
+  state:
+  <input type="text" [formControl]="state">
+</label><br><br>
+<label>
+  Zip code:
+  <input type="text" [formControl]="zipcode">
+</label><br><br>
+</div>
+</div>
+<button type="submit">submit</button>
+
+</form>
+</div>

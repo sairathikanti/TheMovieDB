@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormGroup,FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-registration',
@@ -7,10 +7,24 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./registration.component.css']
 })
 export class RegistrationComponent implements OnInit {
-name = new FormControl('');
+
+  profileForm = new FormGroup({
+    firstName : new FormControl(''),
+    lastName : new FormControl(''),
+    address : new FormGroup({
+      street: new FormControl(''),
+      city: new FormControl(''),
+      state: new FormControl(''),
+      zipcode: new FormControl(''),
+    })
+
+  });
+onSubmit(){
+  console.warn(this.profileForm.value);
+}
   constructor() { }
 
   ngOnInit() {
   }
-
+ 
 }
