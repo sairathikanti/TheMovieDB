@@ -1,17 +1,13 @@
-<p>
-  login works!
-</p>
-<form [formGroup]="loginForm" (ngSubmit)="loginSubmit()">
+<div class="container">
+<div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="Email">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Password">
+  </mat-form-field>
 
-  <div>
-    <label>
-      UserName:
-      <input type="text" [formControl]="userName">
-    </label><br><br>
-    <label>
-        Password:
-        <input type="text" [formControl]="password">
-      </label><br><br>
-  </div>
-  <a routerLink="/registration">Register</a>
-</form>
+<button routerLink ="/dashboard"  mat-raised-button color="accent">Login</button>
+<div id="hint"><a routerLink="/registration">ooh..! don't have account..?</a></div>
+
+</div></div>

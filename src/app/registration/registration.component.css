@@ -1,5 +1,18 @@
-.container{
-    border:5px;
-    border-color: black;
-   
-}
+.example-container {
+    
+    flex-direction: column;
+    width: 25%;
+  
+   padding: inherit;
+   position: fixed;
+   top: 45%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   border-style: solid;
+   padding: 45px 15px 85px 15px;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+ 

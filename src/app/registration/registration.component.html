@@ -1,35 +1,15 @@
-<div class="container">
-<form [formGroup]="profileForm" (ngSubmit)="onsubmit()">
-  <div>
-  <label>
-    First Name:
-    <input type="text" [formControl]="firstName" required>
-  </label><br><br>
-  
-  <label>
-    Last Name:
-    <input type="text" [formControl]="lastName" required>
-  </label><br><br>
-  <div formGroupName="address">
-<label>
-  Street:
-  <input type="text" [formControl]="street">
-</label><br><br>
-<label>
-  city:
-  <input type="text" [formControl]="city">
-</label><br><br>
-<label>
-  state:
-  <input type="text" [formControl]="state">
-</label><br><br>
-<label>
-  Zip code:
-  <input type="text" [formControl]="zipcode">
-</label><br><br>
-</div>
-</div>
-<button type="submit">submit</button>
 
-</form>
+  <div class="example-container">
+  <mat-form-field>
+    <input matInput placeholder="UserName">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Email">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Password">
+  </mat-form-field>
+
+    <button  routerLink="/login" mat-raised-button color="accent">Register</button>
+  
 </div>
