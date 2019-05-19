@@ -1,6 +1,23 @@
-<p>
-  dashboard works!
-</p>
+<!-- <div class="row">  
+<div class="column" *ngIf="users">
+      <div class="card" *ngFor="let user of users.results">
+        <img src="https://image.tmdb.org/t/p/w500{{user.poster_path}}" width="" height="150" alt="Wind Speed Graph" />
+    </div>
+</div> 
+</div>
 <div>
   <a routerLink="/login">Logout</a>
-</div>
+</div>  
+
+   
+
+  -->
+
+  <div class="row" *ngIf="users">
+    <div class="column" *ngFor="let user of users.results">
+      <div class="card">
+        <h3>Card 1</h3>
+        <img class="img" src="https://image.tmdb.org/t/p/w500{{user.poster_path}}"/>
+      </div>
+    </div>
+  </div>

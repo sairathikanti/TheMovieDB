@@ -11,6 +11,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
+import {HttpClientModule} from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +26,13 @@ import {MatButtonModule} from '@angular/material/button';
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     AppRoutingModule,
     RouterModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
