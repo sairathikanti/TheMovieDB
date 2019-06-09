@@ -18,7 +18,7 @@ users : Object;
       console.log(this.users)
     })
   }
-
+  items = Array.from({length: 100000}).map((_, i) => `Item #${i}`);
   
   
 

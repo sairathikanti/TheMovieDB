@@ -6,12 +6,14 @@ import { LoginComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 import {HttpClientModule} from '@angular/common/http';
+import {ScrollDispatchModule} from '@angular/cdk/scrolling';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -31,7 +33,10 @@ import {HttpClientModule} from '@angular/common/http';
     RouterModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    ScrollDispatchModule,
+    MatCardModule
+  
 
   ],
   providers: [],

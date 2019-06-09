@@ -1,23 +1,21 @@
-<!-- <div class="row">  
-<div class="column" *ngIf="users">
-      <div class="card" *ngFor="let user of users.results">
-        <img src="https://image.tmdb.org/t/p/w500{{user.poster_path}}" width="" height="150" alt="Wind Speed Graph" />
-    </div>
-</div> 
-</div>
-<div>
-  <a routerLink="/login">Logout</a>
-</div>  
-
-   
-
-  -->
-
-  <div class="row" *ngIf="users">
-    <div class="column" *ngFor="let user of users.results">
+  
+ <!-- <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="50" class="example-viewport">
+    <div *cdkVirtualFor="let user of users.results" class="example-item">
       <div class="card">
         <h3>Card 1</h3>
-        <img class="img" src="https://image.tmdb.org/t/p/w500{{user.poster_path}}"/>
-      </div>
+        <img class="img" src="https://image.tmdb.org/t/p/w500{{user.poster_path}}"/><br><br>
+      </div><br><br>
     </div>
+  </cdk-virtual-scroll-viewport>  -->
+
+  <div class="cdk-virtual-scroll-data-source-example">
+    <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="50" class="example-viewport">
+      <div *cdkVirtualFor="let user of users.results" class="example-item">
+        <div class="card">
+          <h3>Card 1</h3>
+          <img class="img" src="https://image.tmdb.org/t/p/w500{{user.poster_path}}"/>
+        </div>
+      </div>
+    </cdk-virtual-scroll-viewport> 
+  
   </div>
